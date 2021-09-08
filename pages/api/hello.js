@@ -1,32 +1,35 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import awsIot from 'aws-iot-device-sdk'
-import path from 'path'
+import AWS from 'aws-sdk'
 
 export default function handler(req, res) {
 
-  /* 
-    const device = awsIot.device({
-      clientId: 'Browser',
-      host: 'a33lelep6oufus-ats.iot.us-west-2.amazonaws.com',
-      port: 8883,
-      keyPath: path.resolve(__dirname, '../../../../public/aws/Browser.private.key'),
-      certPath: path.resolve(__dirname, '../../../../public/aws/Browser.cert.pem'),
-      caPath: path.resolve(__dirname, '../../../../public/aws/AmazonRootCA1.pem'),
-    });
-  
-    const topic = "inTopic"
-  
-    console.log('deberia conectarse')
-  
-    device.on('connect', () => {
-      console.log('Connecting to AWS  IoT Core');
-      console.log(`Sending data`)
-      device.publish(topic, 'hola mundo');
-    })
-  
-    device.on('message', (topic, payload) => {
-      console.log('message', topic, payload.toString());
-    }); */
+	AWS.config.region = 'us-east-1'
 
-  res.status(200).json({ name: 'John Doe' })
+	const endpoint = 'a33lelep6oufus-ats.iot.us-east-1.amazonaws.com'
+	/* const iot = new AWS.Iot() */
+	const iotdata = new AWS.IotData({ endpoint: endpoint })
+	const topic = "inTopic";
+	/* const type = "MySmartIoTDevice" */
+
+	/* iot.createThing('device').on('success', function (response) {
+		//Thing Created!
+		console.log('created')
+	}).on('error', function (response) {
+		console.log(response);
+	}).send(); */
+
+	const registrationData = 'hola';
+
+	const registrationParams = {
+		topic: topic,
+		payload: registrationData,
+		qos: 0
+	};
+
+	iotdata.publish(registrationParams, (err, data) => {
+		if (err) console.log(err, err.stack); // an error occurred
+		// else Published Successfully!
+		console.log('publicado', data)
+	});
+
+	res.status(200).json({ name: 'John Doe' })
 }
