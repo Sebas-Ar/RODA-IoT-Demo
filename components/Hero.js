@@ -42,7 +42,6 @@ const Hero = ({ children, entrada, toogleEntrada, state }) => {
                 .img{
                     width: 257px;
                     height: 134px;
-                    background-color: red;
                     background-image: url("/img/USTAPARK.jpeg");
                     background-repeat: no-repeat;
                     background-position: center center;

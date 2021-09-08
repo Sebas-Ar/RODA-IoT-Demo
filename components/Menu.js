@@ -17,7 +17,7 @@ const Menu = ({ toogleProfile }) => {
                     height: 60px;
                     background: var(--blue);
                     border-radius: 20px 20px 0px 0px;
-                    top: 580px;
+                    bottom: 0px;
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
                     align-items: center;

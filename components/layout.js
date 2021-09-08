@@ -37,6 +37,13 @@ const Layout = ({ children, urlImg, toogleProfile }) => {
             background-image: url("${urlImg}");
             background-position: center center;
           }
+          
+          @media screen and (max-width: 500px) {
+            .app {
+              width: 100%;
+              height: 100%;
+            }
+          }
         
         `}</style>
 
