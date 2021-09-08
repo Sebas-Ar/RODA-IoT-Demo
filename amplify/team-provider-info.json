@@ -1,20 +1,20 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-roda-dev-182132-authRole",
-            "UnauthRoleArn": "arn:aws:iam::776516132940:role/amplify-roda-dev-182132-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::776516132940:role/amplify-roda-dev-182132-authRole",
+            "AuthRoleName": "amplify-roda-dev-192132-authRole",
+            "UnauthRoleArn": "arn:aws:iam::776516132940:role/amplify-roda-dev-192132-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::776516132940:role/amplify-roda-dev-192132-authRole",
             "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-roda-dev-182132-deployment",
-            "UnauthRoleName": "amplify-roda-dev-182132-unauthRole",
-            "StackName": "amplify-roda-dev-182132",
-            "StackId": "arn:aws:cloudformation:us-west-2:776516132940:stack/amplify-roda-dev-182132/5cc61f60-1032-11ec-ab4b-0655c6c83edf",
-            "AmplifyAppId": "d37gv6ylecmngi"
+            "DeploymentBucketName": "amplify-roda-dev-192132-deployment",
+            "UnauthRoleName": "amplify-roda-dev-192132-unauthRole",
+            "StackName": "amplify-roda-dev-192132",
+            "StackId": "arn:aws:cloudformation:us-west-2:776516132940:stack/amplify-roda-dev-192132/bbb7b850-103a-11ec-86b9-02b721611e35",
+            "AmplifyAppId": "d3cj70k3kk6vid"
         },
         "categories": {
             "hosting": {
                 "amplifyhosting": {
-                    "appId": "d37gv6ylecmngi",
+                    "appId": "d3cj70k3kk6vid",
                     "type": "cicd"
                 }
             }
