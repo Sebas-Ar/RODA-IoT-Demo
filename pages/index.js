@@ -1,7 +1,23 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+import axios from 'axios'
+import { useEffect } from 'react';
+
+const Home = () => {
+
+
+  useEffect(() => {
+
+    getAxios()
+
+  }, [])
+
+  const getAxios = async () => {
+    const response = await axios.get('/api/hello')
+    console.log(response)
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,3 +31,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
