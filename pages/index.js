@@ -33,7 +33,8 @@ const biciparqueadero = () => {
     const onSubmit = async (e) => {
         e.preventDefault()
 
-        await axios.get('/api/hello')
+        const response = await axios.get('/api/hello')
+        console.log(response)
         setIsActive(true)
         const time = setInterval(() => {
 
