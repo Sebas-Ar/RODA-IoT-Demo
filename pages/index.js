@@ -36,7 +36,7 @@ const biciparqueadero = () => {
 
         const response = await axios.get('/api/hello')
         console.log(response)
-        setIsActive(true)
+        /* setIsActive(true)
         const time = setInterval(() => {
 
             setCount(cuenta => {
@@ -52,7 +52,7 @@ const biciparqueadero = () => {
         setTimeout(async () => {
             setIsActive(false)
             await axios.get('/api/hello')
-        }, 10000)
+        }, 10000) */
 
     }
 
