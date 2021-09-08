@@ -21,5 +21,5 @@ export default function handler(req, res) {
 		// else Published Successfully!
 	});
 
-	res.status(200).json({ name: 'John Doe', test })
+	res.status(200).json({ name: 'John Doe' })
 }
