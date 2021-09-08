@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import Head from 'next/head'
 import Entrada from "../components/Entrada"
 import Hero from "../components/Hero"
 import LabelsList from "../components/LabelsList"
@@ -61,6 +62,9 @@ const biciparqueadero = () => {
 
     return (
         <Layout toogleProfile={toogleProfile} urlImg="/img/map.jpg">
+            <Head>
+                <title>RODA</title>
+            </Head>
             {profile ? (
                 receive ? (
                     <UserReceive />
