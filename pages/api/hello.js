@@ -19,7 +19,7 @@ export default function handler(req, res) {
 	};
 	test = '3'
 	iotdata.publish(registrationParams, (err, data) => {
-		if (err) console.log(err, err.stack); // an error occurred
+		if (err) test = err // an error occurred
 		// else Published Successfully!
 		test = '4'
 		console.log('publicado', data)
